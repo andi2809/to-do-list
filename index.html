@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To-Do List</title>
+
+		<!-- Link Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Link lesscss -->
+		<link rel="stylesheet/less" type="text/css" href="styles.less" />
+		<script src="https://cdn.jsdelivr.net/npm/less"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<div class="text">To-Do List</div>
+				<img src="./images/icon.png" alt="icon to-do list" class="icon" />
+			</div>
+			<div class="add">
+				<input class="input-box" type="text" placeholder="Add your text" />
+				<button onclick="addTask()">Add</button>
+			</div>
+			<div class="alert"></div>
+			<ul class="list-container"></ul>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

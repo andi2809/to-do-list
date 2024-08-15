@@ -1,0 +1,138 @@
+body {
+	margin: 0 !important;
+	background-image: linear-gradient(
+		to left bottom,
+		#051937,
+		#004d7a,
+		#008793,
+		#00bf72,
+		#a8eb12
+	);
+	font-family: "Noto Sans", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.container {
+	margin: 0 20px;
+	// sizing
+	max-width: 450px;
+	@media (max-width: 576px) {
+		max-width: 400px;
+	}
+	min-height: 200px;
+	max-height: 600px;
+	padding: 24px 16px;
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 12px;
+	// transition: all 0.5s;
+	transition: display 0.4s, opacity 0.5s linear !important;
+	.title {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		.text {
+			font-size: 24px;
+			color: rgb(3, 3, 75);
+			font-weight: bold;
+		}
+		.icon {
+			width: 36px;
+			height: 36px;
+		}
+	}
+	.add {
+		margin-top: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		border-radius: 16px;
+		// padding: 8px 12px;
+		background-color: rgb(159, 210, 255);
+		// max-width: auto;
+		input {
+			flex: 1;
+			border: none;
+			outline: none;
+			background: transparent;
+			padding: 10px 16px;
+			font-size: 14px;
+			font-weight: 500;
+			&::placeholder {
+				color: rgb(88, 88, 88);
+			}
+		}
+		button {
+			box-sizing: border-box;
+			color: rgb(83, 82, 79);
+			background: rgb(34, 244, 255);
+			padding: 10px 24px;
+			width: 72px !important;
+			height: 35px !important;
+			border: none;
+			outline: none;
+			border-radius: inherit;
+			cursor: pointer;
+		}
+	}
+	.list-container {
+		padding: 0;
+		li {
+			position: relative;
+			list-style: none;
+			font-size: 17px;
+			padding: 12px 8px 12px 50px;
+			user-select: none;
+			cursor: pointer;
+			&::before {
+				content: "";
+				position: absolute;
+				height: 28px;
+				width: 28px;
+				border-radius: 50%;
+				background-image: url(images/unchecked.png);
+				background-size: cover;
+				background-position: center;
+				top: 11px;
+				left: 8px;
+			}
+		}
+		li.checked {
+			color: #555;
+			text-decoration: line-through;
+			&::before {
+				background-image: url(images/checked.png) !important;
+			}
+		}
+	}
+}
+
+.alert {
+	font-size: 12px;
+	color: rgb(248, 104, 104);
+	margin-top: 4px;
+	margin-left: 16px;
+}
+.close {
+	position: absolute;
+	top: 3px;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	font-size: 22px;
+	color: #555;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.2s;
+	&:hover {
+		background-color: #edeef0;
+	}
+}
